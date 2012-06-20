@@ -17,5 +17,5 @@
 # limitations under the License.
 #
 
-include_recipe "cloudfoundry-ruby-runtime::ruby_1_8_7"
+# include_recipe "cloudfoundry-ruby-runtime::ruby_1_8_7"
 include_recipe "cloudfoundry-ruby-runtime::ruby_1_9_2"

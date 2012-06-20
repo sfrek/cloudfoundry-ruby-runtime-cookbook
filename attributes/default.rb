@@ -1,12 +1,12 @@
 include_attribute "rbenv"
 
-default[:cloudfoundry_ruby_runtime][:ruby_1_8_7_version] = "1.8.7-p334"
+# default[:cloudfoundry_ruby_runtime][:ruby_1_8_7_version] = "1.8.7-p334"
 default[:cloudfoundry_ruby_runtime][:ruby_1_9_2_version] = "1.9.2-p290"
 
-default[:cloudfoundry_dea][:runtimes][:ruby18][:name]         = "ruby18"
-default[:cloudfoundry_dea][:runtimes][:ruby18][:cookbook]     = "cloudfoundry-ruby-runtime::ruby_1_8_7"
-default[:cloudfoundry_dea][:runtimes][:ruby18][:version_flag] = "-v | cut -d' ' -f2"
-default[:cloudfoundry_dea][:runtimes][:ruby18][:default]      = false
+# default[:cloudfoundry_dea][:runtimes][:ruby18][:name]         = "ruby18"
+# default[:cloudfoundry_dea][:runtimes][:ruby18][:cookbook]     = "cloudfoundry-ruby-runtime::ruby_1_8_7"
+# default[:cloudfoundry_dea][:runtimes][:ruby18][:version_flag] = "-v | cut -d' ' -f2"
+# default[:cloudfoundry_dea][:runtimes][:ruby18][:default]      = false
 
 default[:cloudfoundry_dea][:runtimes][:ruby19][:name]         = "ruby19"
 default[:cloudfoundry_dea][:runtimes][:ruby19][:cookbook]     = "cloudfoundry-ruby-runtime::ruby_1_9_2"
