@@ -4,3 +4,7 @@ node.default[:cloudfoundry_dea][:runtimes][:ruby19][:version]      = node[:cloud
 include_recipe "rbenv"
 
 rbenv_ruby node.cloudfoundry_ruby_runtime.ruby_1_9_2_version
+
+rbenv_gem "bundler" do
+  ruby_version node.cloudfoundry_ruby_runtime.ruby_1_9_2_version
+end
