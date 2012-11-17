@@ -9,6 +9,6 @@ version          "0.99.0"
   supports os
 end
 
-%w{ rbenv }.each do |cb|
+%w{ cloudfoundry rbenv }.each do |cb|
   depends cb
 end
