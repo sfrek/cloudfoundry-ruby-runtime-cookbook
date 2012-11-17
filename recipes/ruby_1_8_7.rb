@@ -1,6 +1,18 @@
-node.default['cloudfoundry_dea']['runtimes']['ruby18']['executable']  = File.join(node['rbenv']['system_prefix'], "rbenv", "versions", node['cloudfoundry_ruby_runtime']['ruby_1_8_7_version'], "bin", "ruby")
-node.default['cloudfoundry_dea']['runtimes']['ruby18']['version']     = node['cloudfoundry_ruby_runtime']['ruby_1_8_7_version'].sub('-', '')
+ruby_ver  = node['cloudfoundry_ruby_runtime']['ruby_1_8_7_version']
+ruby_exe  = ruby_bin_path(node['cloudfoundry_ruby_runtime']['ruby_1_8_7_version'])
 
 include_recipe "rbenv"
+include_recipe "rbenv::ruby_build"
 
-rbenv_ruby node['cloudfoundry_ruby_runtime']['ruby_1_8_7_version']
+rbenv_ruby ruby_ver
+
+rbenv_gem "bundler" do
+  ruby_version ruby_ver
+end
+
+cloudfoundry_runtime "ruby19" do
+  version       ruby_ver.sub('-', '')
+  executable    ruby_exe
+  version_flag  "-v | cut -d' ' -f2"
+  default       true
+end
