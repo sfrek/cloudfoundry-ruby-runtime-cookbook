@@ -16,4 +16,6 @@ cloudfoundry_runtime "ruby19" do
   executable    ruby_exe
   version_flag  "-v | cut -d' ' -f2"
   default       true
-end
+  frameworks    %w{ rails3 sinatra }
+  action :nothing
+end.run_action(:create)
