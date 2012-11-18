@@ -1,5 +1,6 @@
 ruby_ver  = node['cloudfoundry_ruby_runtime']['ruby_1_9_2_version']
-ruby_exe  = ruby_bin_path(node['cloudfoundry_ruby_runtime']['ruby_1_9_2_version'])
+ruby_path = ruby_bin_path(node['cloudfoundry_ruby_runtime']['ruby_1_9_2_version'])
+ruby_exe  = ::File.join(ruby_path, 'ruby')
 
 include_recipe "rbenv"
 include_recipe "rbenv::ruby_build"
