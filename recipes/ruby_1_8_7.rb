@@ -32,7 +32,7 @@ rbenv_gem "bundler" do
   ruby_version ruby_ver
 end
 
-cloudfoundry_runtime "ruby19" do
+cloudfoundry_runtime "ruby18" do
   version       ruby_ver.sub('-', '')
   executable    ruby_exe
   version_flag  "-v | cut -d' ' -f2"
