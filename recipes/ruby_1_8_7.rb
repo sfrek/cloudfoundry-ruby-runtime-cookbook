@@ -8,6 +8,7 @@ include_recipe "rbenv::ruby_build"
 rbenv_ruby ruby_ver
 
 rbenv_gem "bundler" do
+  version node['cloudfoundry_ruby_runtime']['bundler_version']
   ruby_version ruby_ver
 end
 
