@@ -27,11 +27,28 @@ version of Ruby 1.9.3 that should be installed. Defaults to `1.9.3-p286`.
 * `node['cloudfoundry_ruby_runtime']['bundler_version']` - The exact
 version of the Bundler gem that should be installed. Defaults to `1.1.3`.
 
+Recipes
+=======
+
+ruby18
+------
+
+Installs Ruby 1.8.7 for use by DEAs.
+
+ruby19
+------
+
+Installs Ruby 1.9.2 for use by DEAs.
+
+ruby193
+-------
+
+Installs Ruby 1.9.3 for use by DEAs.
+
 Usage
 =====
 
-Add either `cloudfoundry_ruby_runtime::ruby_1_8_7` or
-`cloudfoundry_ruby_runtime::ruby_1_9_2` to the run list of a DEA node to
+Add one of the recipes to the run list of a DEA node to
 enable support for Ruby-based applications on that DEA.
 
 Note that other Cloud Foundry components also use Ruby internally; those
