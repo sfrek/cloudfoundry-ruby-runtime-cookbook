@@ -1,4 +1,4 @@
 cookbook "cloudfoundry-ruby-runtime" do
-  configuration "ruby_1_9_2"
+  configuration "ruby19"
   runtimes []
 end
