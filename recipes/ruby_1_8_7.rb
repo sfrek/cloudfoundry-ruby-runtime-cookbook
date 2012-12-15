@@ -18,8 +18,8 @@
 # limitations under the License.
 #
 
-ruby_ver  = node['cloudfoundry_ruby_runtime']['ruby_1_8_7_version']
-ruby_path = ruby_bin_path(node['cloudfoundry_ruby_runtime']['ruby_1_8_7_version'])
+ruby_ver  = node['cloudfoundry_ruby_runtime']['ruby18']['version']
+ruby_path = ruby_bin_path(ruby_ver)
 ruby_exe  = ::File.join(ruby_path, 'ruby')
 
 include_recipe "rbenv"

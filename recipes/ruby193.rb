@@ -1,9 +1,8 @@
 #
 # Cookbook Name:: cloudfoundry-ruby-runtime
-# Recipe:: ruby_1_9_2
+# Recipe:: ruby193
 #
 # Copyright 2012, ZephirWorks
-# Copyright 2012, Trotter Cashion
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +17,7 @@
 # limitations under the License.
 #
 
-ruby_ver  = node['cloudfoundry_ruby_runtime']['ruby19']['ruby_1_9_2_version']
+ruby_ver  = node['cloudfoundry_ruby_runtime']['ruby193']['version']
 ruby_path = ruby_bin_path(ruby_ver)
 ruby_exe  = ::File.join(ruby_path, 'ruby')
 
@@ -32,7 +31,7 @@ rbenv_gem "bundler" do
   ruby_version ruby_ver
 end
 
-cloudfoundry_runtime "ruby19" do
+cloudfoundry_runtime "ruby193" do
   version       ruby_ver.sub('-', '')
   executable    ruby_exe
   version_flag  "-v | cut -d' ' -f2"

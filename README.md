@@ -18,10 +18,12 @@ Tested on:
 Attributes
 ==========
 
-* `node['cloudfoundry_ruby_runtime']['ruby_1_8_7_version']` - The exact
+* `node['cloudfoundry_ruby_runtime']['ruby18']['version']` - The exact
 version of Ruby 1.8.7 that should be installed. Defaults to `1.8.7-p334`.
-* `node['cloudfoundry_ruby_runtime']['ruby_1_9_2_version']` - The exact
+* `node['cloudfoundry_ruby_runtime']['ruby19']['version']` - The exact
 version of Ruby 1.9.2 that should be installed. Defaults to `1.9.2-p290`.
+* `node['cloudfoundry_ruby_runtime']['ruby193']['version']` - The exact
+version of Ruby 1.9.3 that should be installed. Defaults to `1.9.3-p286`.
 * `node['cloudfoundry_ruby_runtime']['bundler_version']` - The exact
 version of the Bundler gem that should be installed. Defaults to `1.1.3`.
 
