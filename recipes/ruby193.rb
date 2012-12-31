@@ -32,10 +32,13 @@ rbenv_gem "bundler" do
 end
 
 cloudfoundry_runtime "ruby193" do
-  version       ruby_ver.sub('-', '')
-  executable    ruby_exe
-  version_flag  "-v | cut -d' ' -f2"
-  default       true
-  frameworks    %w{ rails3 sinatra }
+  version           ruby_ver.sub('-', '')
+  description       "Ruby 1.9.3"
+  executable        ruby_exe
+  version_flag      "-e 'puts RUBY_VERSION'"
+  version_output    "1.9.3"
+  additional_checks "-e 'puts RUBY_PATCHLEVEL == 286'"
+  default           true
+  frameworks        %w{ rails3 sinatra }
   action :nothing
 end.run_action(:create)
