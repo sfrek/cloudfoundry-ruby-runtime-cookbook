@@ -9,6 +9,5 @@ version          "1.1.0"
   supports os
 end
 
-%w{ cloudfoundry rbenv }.each do |cb|
-  depends cb
-end
+depends "cloudfoundry", "~> 1.0.4"
+depends "rbenv"
